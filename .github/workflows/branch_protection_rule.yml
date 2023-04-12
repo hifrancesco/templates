@@ -4,6 +4,7 @@ on:
   branch_protection_rule:
     branches:
       - main
+      - dev
 
 jobs:
   run-script:
