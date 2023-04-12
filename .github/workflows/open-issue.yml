@@ -1,4 +1,4 @@
-name: Webhook Workflow
+name: open-issue
 
 on:
   issues:
