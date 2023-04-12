@@ -7,8 +7,7 @@ on:
       - dev
   check_run:
     types: [completed]
-
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
