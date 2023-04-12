@@ -1,4 +1,4 @@
-name: You Are Great Workflow
+name: echo-great
 
 on:
   push:
