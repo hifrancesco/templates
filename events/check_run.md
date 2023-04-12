@@ -1,0 +1,5 @@
+- The `check_run` event is triggered when a check run is created, completed, rerequested or requested_action.
+- A check run is a suite of one or more checks that run as part of a GitHub Actions workflow to validate code changes.
+- The `check_run` event payload includes information about the check run, such as the ID of the check run, the SHA of the commit that triggered the check run, and the status of the check run.
+- You can use the `check_run` event to perform additional actions based on the outcome of the check run, such as commenting on the pull request or triggering another workflow.
+- To use the `check_run` event in your workflow, you can define a on: `check_run` trigger in your workflow YAML file.

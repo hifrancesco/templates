@@ -1,0 +1,4 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    - cron: '0 0 * * *'
