@@ -22,4 +22,4 @@ jobs:
     - name: Run script
       run: |
         cd events-py
-        python main.py
+        python branch_protection_rule.py
