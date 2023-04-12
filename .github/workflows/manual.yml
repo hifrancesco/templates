@@ -1,11 +1,19 @@
 name: manual
 
-on:
+on: 
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
 
 jobs:
-  build:
+  printInputs:
     runs-on: ubuntu-latest
     steps:
-    - name: Say Hello
-      run: echo "Hello World!"
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}" 
