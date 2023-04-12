@@ -7,18 +7,19 @@ on:
       - dev
 
 jobs:
-  build:
+  run-script:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Read branch_protection_rule.md
-        id: readme
-        run: |
-          file_content=$(cat ./events/branch_protection_rule.md)
-          echo "{name}={file_content}" >> $GITHUB_OUTPUT
-
-      - name: Print branch_protection_rule.md
-        run: |
-          echo "${{ steps.readme.outputs.content }}"
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run script
+      run: |
+        cd events-py
+        python main.py
