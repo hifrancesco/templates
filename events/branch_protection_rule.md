@@ -1,5 +1,9 @@
-- `branch_protection_rule` is an event that can trigger a workflow in GitHub Actions.
-- This event occurs when a branch protection rule is created, updated, or deleted in a repository.
-- Branch protection rules help to enforce certain policies and restrictions on branches in a repository, such as requiring pull request reviews or status checks before merging.
-- You can use the `branch_protection_rule` event in your workflow to automatically perform certain actions or checks when a branch protection rule is created, updated, or deleted in your repository.
-- For example, you could use this event to automatically notify your team or perform additional checks before merging any pull requests to a protected branch.
+`branch_protection_rule` is an event that can trigger a workflow in GitHub Actions.
+
+Branch protection rules enforce policies and restrictions on repository branches, like requiring pull request reviews or status checks before merging.
+
+This event occurs when a branch protection rule is created, edited, or deleted in a repository.
+
+You can use the `branch_protection_rule` event in your workflow to perform certain actions or checks when a branch protection rule is created, edited, or deleted in your repository.
+
+For instance, you can use this event to alert your team or perform extra checks before merging pull requests to a protected branch.

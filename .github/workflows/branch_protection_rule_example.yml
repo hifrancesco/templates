@@ -1,0 +1,24 @@
+name: branch_protection_rule_example
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Read branch_protection_rule.md
+        id: readme
+        run: |
+          file_content=$(cat ./events/branch_protection_rule.md)
+          echo "::set-output name=content::$(file_content)"
+
+      - name: Print branch_protection_rule.md
+        run: |
+          echo "${{ steps.readme.outputs.content }}"
