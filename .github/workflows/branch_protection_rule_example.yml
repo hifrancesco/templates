@@ -17,8 +17,8 @@ jobs:
         id: readme
         run: |
           file_content=$(cat ./events/branch_protection_rule.md)
-          echo "::set-output name=content::$(file_content)"
+          echo "{name}={file_content}" >> $GITHUB_OUTPUT
 
       - name: Print branch_protection_rule.md
         run: |
-          echo "${{ steps.readme.outputs.content }}"
+          cat "${{ steps.readme.outputs.content }}"
