@@ -21,4 +21,4 @@ jobs:
 
       - name: Print branch_protection_rule.md
         run: |
-          cat "${{ steps.readme.outputs.content }}"
+          echo "${{ steps.readme.outputs.content }}"
