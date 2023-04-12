@@ -3,6 +3,10 @@ name: Webhook Workflow
 on:
   issues:
     types: [opened]
+  push:
+    branches:
+      - main
+      - test-branch
 
 jobs:
   build:
