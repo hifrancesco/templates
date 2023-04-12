@@ -1,0 +1,17 @@
+name: You Are Great Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - test-branch
+  schedule:
+    - cron: '*/3 * * * *'
+
+jobs:
+  message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Message action
+      run: echo "You are great"

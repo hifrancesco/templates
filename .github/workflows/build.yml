@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
 # Controls when the workflow will run
@@ -10,9 +8,9 @@ on:
       - dev
       - test-branch
   pull_request:
-    branches: [ "main", "dev" ]
+    branches: [ 'main', 'dev' ]
   schedule:
-    - cron: 0 0 * * *
+    - cron: '0 0 * * *'
 
 jobs:
   build:
