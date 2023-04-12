@@ -1,4 +1,4 @@
-name: open-issue
+name: issues
 
 on:
   issues:
