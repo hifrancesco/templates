@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-      - dev
   check_run:
-    types: [completed]
-  
+    types: [created, completed, rerequested, requested_action]
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
