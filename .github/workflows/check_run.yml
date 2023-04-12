@@ -1,8 +1,13 @@
 name: check_run_example
 
 on:
+  push:
+    branches:
+      - main
+      - dev
   check_run:
     types: [completed]
+
 
 jobs:
   build:
