@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - dev
+      - test branch
   pull_request:
     branches: [ "main", "dev" ]
 
