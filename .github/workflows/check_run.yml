@@ -7,7 +7,6 @@ on:
   check_run:
     types: [created, completed, rerequested, requested_action]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
