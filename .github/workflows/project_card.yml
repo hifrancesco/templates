@@ -1,0 +1,17 @@
+name: project_card_example
+
+on:
+  project_card:
+    types: [created, moved, converted, edited, deleted]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log project card event
+        run: |
+          echo "Project card event happened!"
+          echo """
+          This workflow will run whenever a project card is created, moved, converted, edited, or deleted in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the project_card event.
+          """

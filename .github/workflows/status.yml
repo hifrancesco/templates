@@ -1,0 +1,16 @@
+name: status_example
+
+on:
+  status
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log status event
+        run: |
+          echo "Status changed!"
+          echo """
+          This workflow will run whenever the status of a commit changes.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the status event.
+          """

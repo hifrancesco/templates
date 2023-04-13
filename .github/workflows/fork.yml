@@ -1,0 +1,16 @@
+name: fork_example
+
+on:
+  fork: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log fork event
+        run: |
+          echo "A fork was created!"
+          echo """
+          This workflow will run whenever a fork is created for the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the fork event.
+          """

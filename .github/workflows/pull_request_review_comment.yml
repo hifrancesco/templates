@@ -1,0 +1,17 @@
+name: pull_request_review_comment_example
+
+on:
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log comment event
+        run: |
+          echo "A comment was made on a pull request review!"
+          echo """
+          This workflow will run whenever a new comment is created on a pull request review in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the pull_request_review_comment event.
+          """

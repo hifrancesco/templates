@@ -1,0 +1,17 @@
+name: pull_request_target_example
+
+on:
+  pull_request_target:
+    types: [opened, closed, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log pull request event
+        run: |
+          echo "A pull request was opened, closed, reopened or synchronized!"
+          echo """
+          This workflow will run whenever a pull request is opened, closed, reopened or synchronized in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the pull_request_target event.
+          """

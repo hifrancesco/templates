@@ -1,0 +1,17 @@
+name: Release Example
+
+on:
+  release:
+    types: [published, unpublished, created, edited, deleted, prereleased, released]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log release event
+        run: |
+          echo "A release was published, unpublished, created, edited, deleted, prereleased, or released!"
+          echo """
+          This workflow will run whenever a release event occurs in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the release event.
+          """

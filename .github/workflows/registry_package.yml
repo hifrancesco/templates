@@ -1,0 +1,17 @@
+name: registry_package_example
+
+on:
+  registry_package:
+    types: [published, updated]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log registry_package event
+        run: |
+          echo "A package was published or updated in the container registry!"
+          echo """
+          This workflow will run whenever a package is published or updated in the container registry.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the registry_package event.
+          """

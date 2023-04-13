@@ -1,0 +1,16 @@
+name: primary-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-secondary-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger secondary workflow
+        uses: actions/workflow-dispatch@v2
+        with:
+          workflow: secondary-workflow.yml
+          input: '{"foo": "bar"}'
