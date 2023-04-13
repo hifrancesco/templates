@@ -1,0 +1,18 @@
+name: delete_example
+
+on:
+  delete:
+    branches:
+      - 'feature-[0-100]*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log deleted event
+        run: |
+          echo "Deleted the feature branch!"
+          echo """
+          This workflow will run whenever the feature branch is deleted from the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the delete event.
+          """

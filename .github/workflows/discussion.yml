@@ -1,0 +1,17 @@
+name: discussion_example
+
+on:
+  discussion:
+    types: [created, edited]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log discussion event
+        run: |
+          echo "A discussion was created or edited!"
+          echo """
+          This workflow will run whenever a discussion is created or edited in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the discussion event.
+          """

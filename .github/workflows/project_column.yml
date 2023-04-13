@@ -1,0 +1,17 @@
+name: project_column_example
+
+on:
+  project_column:
+    types: [created, updated, moved]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log project_column event
+        run: |
+          echo "A project column was created, updated or moved!"
+          echo """
+          This workflow will run whenever a project column is created, updated or moved within the repository.
+          You can customize it to perform any actions you want based on the project_column event.
+          """

@@ -1,0 +1,15 @@
+name: page_build_workflow
+
+on:
+  page_build:
+    types: [created]
+
+jobs:
+  handle_page_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log page build event
+        run: |
+          echo "Page build occurred!"
+          echo "Build number: ${{ github.event.build_number }}"
+          echo "Commit SHA: ${{ github.sha }}"

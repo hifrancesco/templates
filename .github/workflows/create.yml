@@ -1,0 +1,17 @@
+name: create_example
+
+on:
+  create:
+    types: [branch, tag]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log created event
+        run: |
+          echo "Created a branch or tag!"
+          echo """
+          This workflow will run whenever a new branch or tag is created in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the create event.
+          """

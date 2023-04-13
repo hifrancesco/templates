@@ -1,0 +1,17 @@
+name: project_example
+
+on:
+  project:
+    types: [created, edited, closed, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log project event
+        run: |
+          echo "Project created, edited, closed, or reopened!"
+          echo """
+          This workflow will run whenever a project is created, edited, closed, or reopened in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the project event.
+          """

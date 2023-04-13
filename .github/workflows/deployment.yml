@@ -1,0 +1,28 @@
+name: deployment_example
+
+on:
+  deployment:
+    types: [created, completed, failed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        run: |
+          echo "Deploying..."
+          # Your deployment commands here
+
+      - name: Notify on Slack
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_CHANNEL: "#deployment-notifications"
+        with:
+          status: ${{ job.status }}
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+          slack-icon-emoji: "rocket"
+          slack-text: |
+            Deployment *${{ job.status }}* on branch `${{ github.ref }}` of repository `${{ github.repository }}`

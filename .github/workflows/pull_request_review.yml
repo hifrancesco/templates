@@ -1,0 +1,17 @@
+name: pull_request_review_example
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log pull request review event
+        run: |
+          echo "A pull request review was submitted!"
+          echo """
+          This workflow will run whenever a pull request review is submitted in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the pull_request_review event.
+          """

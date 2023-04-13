@@ -1,0 +1,12 @@
+name: check_suite
+
+on:
+  check_suite:
+    types: [completed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Check suite completed!"

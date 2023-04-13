@@ -1,0 +1,17 @@
+name: deployment_status_example
+
+on:
+  deployment_status:
+    types: [created, completed, failed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log deployment status
+        run: |
+          echo "Deployment status has been updated!"
+          echo """
+          This workflow will run whenever the deployment status is updated in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the deployment_status event.
+          """

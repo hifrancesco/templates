@@ -1,0 +1,17 @@
+name: milestone_example
+
+on:
+  milestone:
+    types: [created, closed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log milestone event
+        run: |
+          echo "A milestone was created or closed!"
+          echo """
+          This workflow will run whenever a milestone is created or closed in the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the milestone event.
+          """

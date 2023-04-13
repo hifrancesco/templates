@@ -1,0 +1,17 @@
+name: public_example
+
+on:
+  public:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log public event
+        run: |
+          echo "Repository has been made public!"
+          echo """
+          This workflow will run whenever the repository is made public.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the public event.
+          """

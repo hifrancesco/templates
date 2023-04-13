@@ -1,0 +1,17 @@
+name: watch_example
+
+on:
+  watch:
+    types: [started, stopped]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log watch event
+        run: |
+          echo "Someone started or stopped watching this repository!"
+          echo """
+          This workflow will run whenever someone starts or stops watching the repository.
+          It simply logs a message to the console, but you can customize it to perform any actions you want based on the watch event.
+          """

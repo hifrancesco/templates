@@ -1,0 +1,26 @@
+name: pull_request_example
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run tests
+        run: |
+          # Run tests here
+
+      - name: Deploy to staging
+        if: github.event.action == 'opened'
+        run: |
+          # Deploy to staging environment here
+
+      - name: Deploy to production
+        if: github.event.action == 'synchronize'
+        run: |
+          # Deploy to production environment here
