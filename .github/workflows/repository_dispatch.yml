@@ -1,0 +1,16 @@
+name: repository_dispatch_example
+
+on:
+  repository_dispatch:
+    types: [my-event-type]
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log dispatch event
+        run: |
+          echo "Received a repository dispatch event!"
+          echo """
+          This workflow will run whenever a repository dispatch event is triggered.
+          """
