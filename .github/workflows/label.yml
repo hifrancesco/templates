@@ -3,6 +3,9 @@ name: issue_comment_example
 on:
   issue_comment:
     types: [created]
+  pull_request:
+    branches:
+      - main, dev
 
 jobs:
   build:
@@ -10,7 +13,7 @@ jobs:
     steps:
       - name: Log issue_comment event
         run: |
-          echo "New issue comment added!"
+          echo "New issue comment added! :) "
           echo """
           This workflow will run whenever a new comment is added to an issue in the repository.
           It simply logs a message to the console, but you can customize it to perform any actions you want based on the issue_comment event.
