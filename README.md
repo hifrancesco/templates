@@ -1,0 +1,1 @@
+![main](https://github.com/hifrancesco/templates/actions/workflows/grading.yml/badge.svg?branch=main)
