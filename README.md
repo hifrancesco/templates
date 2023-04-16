@@ -1,4 +1,4 @@
-![Build Status](https://github.com/hifrancesco/templates/actions/workflows/continuous-integration.yml/badge.svg)(https://github.com/hifrancesco/templates/actions/workflows/continuous-integration.yml)
+[![Build Status](https://github.com/hifrancesco/templates/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/hifrancesco/templates/actions/workflows/continuous-integration.yml)
 
 ---
 
