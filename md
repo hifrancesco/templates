@@ -1,0 +1,1 @@
+![dev](https://github.com/hifrancesco/templates/actions/workflows/continuous-integration.yml/badge.svg?branch=dev)
